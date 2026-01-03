@@ -4,7 +4,7 @@ Export the tabs in your current window as a plain-text list of links (with optio
 
 - Open the extension popup.
 - Toggle options: include pinned, dedupe URLs, skip Google search pages, skip internal pages, and sort by tab order/domain/title.
-- Click **Copy** or **Download .txt**.
+- Click `Copy` or `Download .txt`.
 
 Output format is one entry per tab as:
 
