@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "tab-link-exporter",
+  "version": "1.2",
+  "description": "Export current-window tabs as a plain text list of links with filtering, deduplication, sorting, copy, and .txt download.",
+  "permissions": ["tabs", "downloads", "clipboardWrite"],
+  "action": {
+    "default_title": "Export tab links",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/resized/icon16.png",
+    "32": "icons/resized/icon32.png",
+    "48": "icons/resized/icon48.png",
+    "128": "icons/resized/icon128.png"
+  }
+}

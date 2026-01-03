@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        font: 14px system-ui;
+        margin: 10px;
+        width: 380px;
+      }
+      .row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+      .row > * {
+        flex: 1;
+      }
+      .controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 10px;
+        margin-bottom: 10px;
+      }
+      label {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        user-select: none;
+      }
+      select {
+        width: 100%;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+      }
+      textarea {
+        width: 100%;
+        height: 230px;
+        resize: vertical;
+        font: 12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      #diag {
+        margin-top: 8px;
+        opacity: 0.85;
+        line-height: 1.25;
+      }
+      .muted {
+        opacity: 0.75;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="controls">
+      <label
+        ><input id="includePinned" type="checkbox" checked /> Include
+        pinned</label
+      >
+      <label
+        ><input id="dedupe" type="checkbox" checked /> Deduplicate URLs</label
+      >
+      <label
+        ><input id="skipGoogle" type="checkbox" checked /> Skip Google
+        search</label
+      >
+      <label
+        ><input id="skipInternal" type="checkbox" checked /> Skip internal
+        pages</label
+      >
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="muted">Sort</div>
+        <select id="sortMode">
+          <option value="none" selected>Tab order (default)</option>
+          <option value="domain">Domain</option>
+          <option value="title">Title</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <button id="copy">Copy</button>
+      <button id="download">Download .txt</button>
+    </div>
+
+    <textarea
+      id="output"
+      readonly
+      placeholder="Click Copy or Download to generate output..."
+    ></textarea>
+    <div id="diag"></div>
+
+    <script src="browser-polyfill.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
