@@ -1,5 +1,7 @@
 # Tab Link Exporter
 
+![Tab Link Exporter icon](icons/final_cropped.png)
+
 Export the tabs in your current window as a plain-text list of links (with optional filtering, deduplication, and sorting), then copy it to your clipboard or download it as a `.txt` file.
 
 - Open the extension popup.
